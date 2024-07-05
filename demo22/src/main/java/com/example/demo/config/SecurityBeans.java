@@ -16,6 +16,7 @@ public class SecurityBeans {
                         authorizeHttpRequests.requestMatchers("/users-api/**")
                                 .hasRole("ADMIN"))
                 .httpBasic(Customizer.withDefaults())
+                .csrf().disable()
                 .sessionManagement(sessionManagement -> sessionManagement
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .build();

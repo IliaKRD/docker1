@@ -9,6 +9,6 @@ LABEL authors="ivshackhov"
 WORKDIR /opt/app
 COPY --from=builder /opt/app/target/*.jar /opt/app/manager.jar
 
-EXPOSE 8081
+EXPOSE 8080
 
 ENTRYPOINT ["java","-Dspring.profiles.active=standalone", "-jar","manager.jar"]
