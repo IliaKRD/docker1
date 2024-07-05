@@ -1,0 +1,27 @@
+spring:
+  security:
+    user:
+      name: Superuser
+      password: admin
+      roles:
+        - ADMIN
+  datasource:
+    url: jdbc:postgresql://172.17.0.4:5432/users
+    username: postgres
+    password: admin
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+flyway:
+  schemas:
+    - public
+    - list
+
+server:
+  port: 8081
+
+logging:
+  level:
+    sql: info
