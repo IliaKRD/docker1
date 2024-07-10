@@ -25,6 +25,16 @@ services:
       - SERVER_PORT= 8081
       - SPRING_DATASOURCE_URL=jdbc:postgresql://service-db/postgres
 
+  test-module:
+    image: test_module:0.0.1
+    build:
+      context: ./test_module
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+    environment:
+      - SERVER_PORT= 8082
+
   service-db:
     image: postgres:14.7-alpine
     environment:

@@ -11,6 +11,7 @@
     <modules>
         <module>demo22</module>
         <module>Manager</module>
+        <module>Test_module</module>
     </modules>
 
     <properties>
